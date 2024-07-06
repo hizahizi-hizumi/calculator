@@ -1,10 +1,20 @@
+import { Calculator } from "@/components/Calculator/Calculator";
 import { Hoge } from "@/components/Hoge/Hoge";
 
 export default function Home() {
   return (
-    <div>
-      <h1>Home</h1>
-      <Hoge />
-    </div>
+    <>
+      <div
+        style={{
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          height: "100vh",
+          width: "100%",
+        }}
+      >
+        <Calculator />
+      </div>
+    </>
   );
 }
