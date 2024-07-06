@@ -1,0 +1,8 @@
+services:
+  front:
+    build:
+      context: ./my/docker/front
+      dockerfile: Dockerfile.dev
+    volumes:
+      - ~/.zshrc:/root/.zshrc
+      - ./my/docker/front/starship.toml:/root/.config/starship.toml

@@ -1,0 +1,19 @@
+FROM shogi-front:latest
+
+RUN apt update
+RUN apt install -y \
+    zsh \
+    git \
+    curl \
+    wget \
+    && apt-get clean
+
+# install brew
+RUN /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+RUN eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+RUN /home/linuxbrew/.linuxbrew/bin/brew update
+
+# zsh
+## install extensions
+RUN /home/linuxbrew/.linuxbrew/bin/brew install zsh-autosuggestions zsh-syntax-highlighting
+RUN /home/linuxbrew/.linuxbrew/bin/brew install starship
