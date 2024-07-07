@@ -25,6 +25,9 @@ export function CalculatorButton(
         backgroundColor: "#fff",
         height: theme.spacing(10),
         fontSize: "1.5em",
+        "&:hover": {
+          backgroundColor: blue[50],
+        },
       },
     },
     operator: {
