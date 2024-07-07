@@ -31,6 +31,20 @@ export function CalculatorProvider(
         return [""];
       }
 
+      if (last === "" || isOperator(last)) {
+        if (isMultiply(character)) {
+          return [""];
+        }
+
+        if (isDivide(character)) {
+          return [""];
+        }
+
+        if (isEqual(character)) {
+          return [""];
+        }
+      }
+
       if (isEqual(character)) {
         if (isOperator(last)) {
           return prevDisplay;
